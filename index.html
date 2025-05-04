@@ -1,13 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
   </head>
   <body>
-    <div id="app"></div>
+    <section class="newsletter">
+      <div class="newsletter__container">
+        <picture class="newsletter__image">
+          <source
+            srcset="./public/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./public/images/illustration-sign-up-mobile.svg"
+            alt="App mockup"
+          />
+        </picture>
+
+        <div class="newsletter__content">
+          <h1 class="newsletter__title">Stay updated!</h1>
+          <p class="newsletter__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="newsletter__list">
+            <li class="newsletter__list-item">
+              Product discovery and building what matters
+            </li>
+            <li class="newsletter__list-item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="newsletter__list-item">And much more!</li>
+          </ul>
+          <div>
+            <form class="newsletter__form">
+              <label for="email" class="newsletter__label">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                class="newsletter__input"
+                required
+              />
+              <button type="submit" class="newsletter__button">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thanks for subscribing! A confirmation email has been sent to
+    ash@loremcompany.com. Please open it and click the button inside to confirm
+    your subscription. Dismiss message -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
