@@ -1,0 +1,82 @@
+// @use "../settings" as *;
+
+// .footer__feature-wrapper {
+//   margin-top: calc(-56px / 2);
+//   padding: $spacing-800 $spacing-400;
+//   position: relative;
+//   @media (min-width: $breakpoint-lg) {
+//     padding: $spacing-1400 $spacing-1000;
+//   }
+//   &::before {
+//     background: url("../../assets/mobile/image-footer.jpg") no-repeat top /
+//       cover;
+//     content: "";
+//     inset: 0;
+//     position: absolute;
+//     z-index: -2;
+//     @media (min-width: $breakpoint-sm) {
+//       background-image: url("../../assets/tablet/image-footer.jpg");
+//     }
+//     @media (min-width: $breakpoint-lg) {
+//       background-image: url("../../assets/desktop/image-footer.jpg");
+//     }
+//   }
+//   &::after {
+//     background-color: rgba($c-cyan-600, 0.85);
+//     content: "";
+//     inset: 0;
+//     pointer-events: none;
+//     position: absolute;
+//     z-index: -1;
+//   }
+// }
+
+// .footer__feature {
+//   display: flex;
+//   flex-direction: column;
+//   gap: $spacing-300;
+//   text-align: center;
+//   @media (min-width: $breakpoint-sm) {
+//     margin: 0 auto;
+//   }
+//   @media (min-width: $breakpoint-lg) {
+//     align-items: center;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     padding: 0 $spacing-1000;
+//     text-align: left;
+//   }
+// }
+
+// .footer__title {
+//   @include text-preset-2;
+//   color: $c-white;
+//   @media (min-width: $breakpoint-lg) {
+//     width: 30%;
+//   }
+// }
+
+// .footer__description {
+//   @include text-preset-4;
+//   color: $c-white;
+//   @media (min-width: $breakpoint-lg) {
+//     width: 30%;
+//   }
+// }
+
+// .footer__button {
+//   align-self: center;
+//   background-color: $c-purple-600;
+//   color: $c-white;
+
+//   &:hover {
+//     background-color: $c-purple-hover;
+//   }
+//   @media (min-width: $breakpoint-lg) {
+//     white-space: nowrap;
+//   }
+// }
+
+// .button__version {
+//   color: $c-purple-300;
+// }

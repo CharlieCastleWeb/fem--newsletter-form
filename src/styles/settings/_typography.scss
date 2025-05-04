@@ -1,0 +1,72 @@
+@use "breakpoints" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+$font-family-body: "Red Hat Display", sans-serif;
+$font-family-heading: "Red Hat Display", sans-serif;
+
+$font-size-xs: 11px;
+$font-size-sm: 13px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 28px;
+$font-size-2xl: 40px;
+$font-size-3xl: 48px;
+$font-size-4xl: 64px;
+
+@mixin text-preset(
+  $font-size,
+  $font-family,
+  $font-weight: 400,
+  $line-height: 1,
+  $letter-spacing: normal,
+  $font-style: normal
+) {
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  font-style: $font-style;
+}
+
+@mixin text-preset-1 {
+  @include text-preset($font-size-2xl, $font-family-heading, 900, 1.1);
+  @media (min-width: $breakpoint-sm) {
+    @include text-preset($font-size-3xl, $font-family-heading, 900, 1.1);
+  }
+  @media (min-width: $breakpoint-md) {
+    @include text-preset($font-size-4xl, $font-family-heading, 900, 1.1);
+  }
+}
+
+@mixin text-preset-2 {
+  @include text-preset(32px, $font-family-heading, 900, 1.1);
+  @media (min-width: $breakpoint-sm) {
+    @include text-preset(36px, $font-family-heading, 900, 1.1);
+  }
+  @media (min-width: $breakpoint-md) {
+    @include text-preset($font-size-2xl, $font-family-heading, 900, 1.1);
+  }
+}
+
+@mixin text-preset-3 {
+  @include text-preset(12px, $font-family-body, 900, 1.1, 4px);
+  @media (min-width: $breakpoint-sm) {
+    @include text-preset(14px, $font-family-body, 900, 1.1, 4px);
+  }
+  @media (min-width: $breakpoint-md) {
+    @include text-preset($font-size-md, $font-family-body, 900, 1.1, 4px);
+  }
+}
+
+@mixin text-preset-4 {
+  @include text-preset($font-size-md, $font-family-body, 500, 1.5);
+  @media (min-width: $breakpoint-md) {
+    @include text-preset($font-size-lg, $font-family-body, 500, 1.5);
+  }
+}
+
+@mixin text-preset-5 {
+  @include text-preset($font-size-md, $font-family-body, 900, 1.5);
+}
