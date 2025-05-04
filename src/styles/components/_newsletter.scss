@@ -8,14 +8,27 @@
     padding: $spacing-500;
     width: 80%;
   }
+  @media (min-width: $breakpoint-lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: $spacing-800;
+    justify-content: space-between;
+    max-width: 900px;
+  }
 }
 
 .newsletter__container {
 }
 
 .newsletter__image {
-  border-radius: $border-radius-lg;
   width: 100%;
+  @media (min-width: $breakpoint-sm) {
+    border-radius: $border-radius-lg;
+  }
+  @media (min-width: $breakpoint-lg) {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .newsletter__content {
@@ -26,6 +39,10 @@
   padding: $spacing-500 $spacing-300;
   @media (min-width: $breakpoint-sm) {
     padding: $spacing-500 0 0 0;
+  }
+  @media (min-width: $breakpoint-lg) {
+    padding-top: 0;
+    align-self: center;
   }
 }
 
