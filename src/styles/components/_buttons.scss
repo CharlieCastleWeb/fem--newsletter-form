@@ -1,0 +1,15 @@
+@use "../settings" as *;
+
+.btn-primary {
+  @include text-preset-2-bold;
+  background-color: $c-blue-800;
+  border-radius: $border-radius-sm;
+  border: none;
+  color: $c-white;
+  padding: $spacing-200;
+  text-align: center;
+}
+
+.btn-active {
+  background: $c-gradient-4;
+}
