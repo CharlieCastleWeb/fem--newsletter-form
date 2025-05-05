@@ -17,8 +17,7 @@
 .success-modal__button {
   @extend .btn-primary;
   background-color: transparent;
-  margin-bottom: $spacing-900;
-  margin-top: auto;
+
   position: relative;
   width: 100%;
   z-index: 2;
