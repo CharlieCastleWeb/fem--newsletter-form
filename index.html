@@ -16,7 +16,7 @@
     </title>
   </head>
   <body>
-    <section class="newsletter">
+    <section class="newsletter hidden">
       <picture>
         <source
           srcset="./public/images/illustration-sign-up-desktop.svg"
@@ -67,9 +67,24 @@
       </div>
     </section>
 
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
+    <section class="success-modal">
+      <div class="success-modal__content">
+        <img
+          src="./public/images/icon-success.svg"
+          alt=""
+          class="success-modal__image"
+        />
+        <h1 class="success-modal__title">Thanks for subscribing!</h1>
+        <p class="success-modal__text">
+          A confirmation email has been sent to
+          <a href="mailto:ash@loremcompany.com" class="success-modal__email"
+            >ash@loremcompany.com</a
+          >. Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+      </div>
+      <button class="success-modal__button">Dismiss message</button>
+    </section>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
