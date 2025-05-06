@@ -16,7 +16,7 @@
     </title>
   </head>
   <body>
-    <section class="newsletter hidden">
+    <section class="newsletter" id="newsletter">
       <picture>
         <source
           srcset="./public/images/illustration-sign-up-desktop.svg"
@@ -44,22 +44,26 @@
           <li class="newsletter__list-item">And much more!</li>
         </ul>
         <div>
-          <form class="newsletter__form">
+          <form class="newsletter__form" id="newsletter-form">
             <div class="newsletter__field-info">
               <label for="email" class="newsletter__label">Email address</label>
-              <span class="newsletter__error-message hidden"
+              <span class="newsletter__error-message hidden" id="error-message"
                 >Valid email required</span
               >
             </div>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
               placeholder="email@company.com"
               class="newsletter__input"
               required
             />
-            <button type="submit" class="newsletter__button btn-primary">
+            <button
+              type="submit"
+              class="newsletter__button btn-primary"
+              id="submit-btn"
+            >
               Subscribe to monthly newsletter
             </button>
           </form>
@@ -67,7 +71,7 @@
       </div>
     </section>
 
-    <section class="success-modal">
+    <section class="success-modal hidden" id="success-modal">
       <div class="success-modal__content">
         <img
           src="./public/images/icon-success.svg"
@@ -83,7 +87,7 @@
           subscription.
         </p>
       </div>
-      <button class="success-modal__button">Dismiss message</button>
+      <button class="success-modal__button" id="dismiss-btn">Dismiss message</button>
     </section>
 
     <script type="module" src="/src/main.ts"></script>
