@@ -1,0 +1,15 @@
+@use "../settings" as *;
+
+footer {
+  @include text-preset-2-regular;
+  color: $c-white;
+  padding: $spacing-300;
+  text-align: center;
+  @media (min-width: $breakpoint-sm) {
+    margin: 0 auto;
+    margin-top: auto;
+  }
+  a {
+    color: $c-red;
+  }
+}

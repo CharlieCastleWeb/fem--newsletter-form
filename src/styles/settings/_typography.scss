@@ -1,0 +1,49 @@
+@use "./breakpoints" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font-family-body: "Roboto", sans-serif;
+$font-family-heading: "Roboto", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-2xl: 40px;
+$font-size-3xl: 56px;
+
+@mixin text-preset(
+  $font-size,
+  $font-family,
+  $font-weight: 400,
+  $line-height: 1,
+  $letter-spacing: normal,
+  $font-style: normal
+) {
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  font-style: $font-style;
+}
+
+@mixin text-preset-1 {
+  @include text-preset($font-size-2xl, $font-family-heading, 700, 1);
+  @media (min-width: $breakpoint-sm) {
+    @include text-preset($font-size-3xl, $font-family-heading, 700, 1.1);
+  }
+}
+
+@mixin text-preset-2-bold {
+  @include text-preset($font-size-md, $font-family-heading, 700, 1.5);
+}
+
+@mixin text-preset-2-regular {
+  @include text-preset($font-size-md, $font-family-heading, 400, 1.5);
+}
+
+@mixin text-preset-3 {
+  @include text-preset($font-size-xs, $font-family-heading, 400, 1.5);
+}

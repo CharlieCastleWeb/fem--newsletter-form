@@ -1,0 +1,54 @@
+@use "../settings" as *;
+
+.btn-primary {
+  @include text-preset-2-bold;
+  background-color: $c-blue-800;
+  border-radius: $border-radius-sm;
+  border: none;
+  color: $c-white;
+  padding: $spacing-200;
+  text-align: center;
+}
+
+.btn-active {
+  background: $c-gradient-4;
+}
+
+.success-modal__button {
+  @extend .btn-primary;
+  background-color: transparent;
+
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  &::before {
+    background: $c-blue-800;
+    border-radius: $border-radius-sm;
+    content: "";
+    inset: 0;
+    opacity: 1;
+    position: absolute;
+    transition: $transition-btn-opacity;
+    z-index: -2;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover::before {
+    opacity: 0;
+  }
+  &::after {
+    background: $c-gradient-4;
+    border-radius: $border-radius-sm;
+    box-shadow: $success-btn-shadow;
+    content: "";
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    transition: $transition-btn-opacity;
+    z-index: -1;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
